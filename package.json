@@ -41,6 +41,7 @@
     "rimraf": "^2.6.3"
   },
   "dependencies": {
+    "flickity-hash": "^1.0.3",
     "mkdirp": "^0.5.1"
   }
 }
