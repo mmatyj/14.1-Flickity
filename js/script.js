@@ -3,12 +3,11 @@ var carouselTemplate = document.getElementById('carousel-template').innerHTML;
 Mustache.parse(carouselTemplate);
 var carouselSlides = '';
 for (var i = 0; i < slides.length; i++) {
-
-    carouselSlides += Mustache.render(carouselTemplate, slides.length[i]);
-    console.log(carouselSlides);
+    slides[i].id = i;
+    carouselSlides += Mustache.render(carouselTemplate, slides[i]);
 }
 
-
+document.querySelector('.main-carousel').innerHTML = carouselSlides;
 
 // FLICKITY
 
