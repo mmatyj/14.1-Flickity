@@ -1,3 +1,17 @@
+// MUSTACHE
+var carouselTemplate = document.getElementById('carousel-template').innerHTML;
+Mustache.parse(carouselTemplate);
+var carouselSlides = '';
+for (var i = 0; i < slides.length; i++) {
+
+    carouselSlides += Mustache.render(carouselTemplate, slides.length[i]);
+    console.log(carouselSlides);
+}
+
+
+
+// FLICKITY
+
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity(elem, {
     cellAlign: 'left',

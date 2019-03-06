@@ -15,7 +15,7 @@
 <body>
     <button class="restart-button">Restart</button>
     <div class="main-carousel">
-        <div class="carousel-cell" id="carousel-cell1" style="background-image: url(https://images.unsplash.com/photo-1540670965439-d55f323cc7ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)">
+        <!-- <div class="carousel-cell" id="carousel-cell1" style="background-image: url(https://images.unsplash.com/photo-1540670965439-d55f323cc7ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)">
             <div class="container">
                 <h3>Edinburgh</h3>
             </div>
@@ -38,13 +38,58 @@
         <div class="carousel-cell" id="carousel-cell5" style="background-image:url(https://images.unsplash.com/photo-1524759562087-0e0d111bf4d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)">
             <div class="container">
                 <h3>Glen Coe</h3>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
     </div>
     <div class="progress-bar"></div>
+    <div class="carousel-cell">
+        <div class="container">
+
+        </div>
+    </div>
+    <script id="carousel-template" type="x-tmpl-mustache">
+
+        <h3>{{title}}<h3>
+        {{{description}}}
+    
+        </script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="js/script.js"></script>
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
-    <script src="js/script.js"></script>
+
+    <!-- TABLICA Z OBIEKTAMI -->
+    <script>
+        var slides = [{
+                title: 'Edinburgh',
+                description: "<p>Lorem ipsum.</p><br><p>Dolor sit.</p>",
+                image: "https://images.unsplash.com/photo-1540670965439-d55f323cc7ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                title: 'Aviemore',
+                description: "<p>Lorem ipsum.</p><br><p>Dolor sit.</p>",
+                image: "https://images.unsplash.com/photo-1508955420465-e9b45fa808eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            },
+            {
+                title: 'Arrochar',
+                description: "<p>Lorem ipsum.</p><br><p>Dolor sit.</p>",
+                image: "https://images.unsplash.com/photo-1539951550511-57bf1b9cf409?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80"
+            },
+            {
+                title: 'Isle of Arran',
+                description: "<p>Lorem ipsum.</p><br><p>Dolor sit.</p>",
+                image: "https://images.unsplash.com/photo-1518355667532-04b0b8a44cab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+            },
+            {
+                title: 'Glen Coe',
+                description: "<p>Lorem ipsum.</p><br><p>Dolor sit.</p>",
+                image: "https://images.unsplash.com/photo-1524759562087-0e0d111bf4d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            },
+        ];
+    </script>
 </body>
 
 </html>
