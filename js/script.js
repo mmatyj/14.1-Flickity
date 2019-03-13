@@ -31,9 +31,9 @@ flkty.on('scroll', function (progress) {
 });
 
 // GOOGLE MAP
-
+var map;
 window.initMap = function () {
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         zoom: 6,
         center: slides[0].coords
     });
@@ -41,11 +41,18 @@ window.initMap = function () {
 
         var marker = new google.maps.Marker({
             position: slides[i].coords,
-            map: map
+            map: map,
+            id: i
         });
         marker.addListener('click', function () {
-            console.log('you clicked marker ' + (i))
+            flkty.select(this.id);
+            map.panTo(slides[this.id].coords);
+            map.setZoom(8);
         })
     }
-
 };
+
+flkty.on('change', function (index) {
+    map.panTo(slides[index].coords);
+    map.setZoom(8);
+});
