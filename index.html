@@ -14,53 +14,65 @@
 
 <body>
     <button class="restart-button">Restart</button>
-    <div class="main-carousel">
-
-    </div>
-    </div>
+    <div class="main-carousel"></div>
     <div class="progress-bar"></div>
-    <div class="carousel-cell">
-        <div class="container">
+    <div id="map"></div>
 
-        </div>
-    </div>
     <script id="carousel-template" type="x-tmpl-mustache">
         <div class="carousel-cell" id="carousel-cell{{id}}" style="background-image: url({{{image}}})">
             <div class="container">
                 <h3>{{title}}<h3>
                 {{{description}}}
             </div>
-        </div>
-        
-    
-        </script>
+        </div>   
+    </script>
 
     <!-- TABLICA Z OBIEKTAMI -->
     <script>
         var slides = [{
                 title: 'Edinburgh',
                 description: "<p>Lorem ipsum.</p><br><p>Dolor sit.</p>",
-                image: "https://images.unsplash.com/photo-1540670965439-d55f323cc7ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                image: "https://images.unsplash.com/photo-1540670965439-d55f323cc7ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+                coords: {
+                    lat: 55.949,
+                    lng: -3.200
+                }
             },
             {
                 title: 'Aviemore',
                 description: "<p>Lorem ipsum.</p><br><p>Dolor sit.</p>",
-                image: "https://images.unsplash.com/photo-1508955420465-e9b45fa808eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                image: "https://images.unsplash.com/photo-1508955420465-e9b45fa808eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+                coords: {
+                    lat: 57.194,
+                    lng: -3.824
+                }
             },
             {
                 title: 'Arrochar',
                 description: "<p>Lorem ipsum.</p><br><p>Dolor sit.</p>",
-                image: "https://images.unsplash.com/photo-1539951550511-57bf1b9cf409?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80"
+                image: "https://images.unsplash.com/photo-1539951550511-57bf1b9cf409?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80",
+                coords: {
+                    lat: 56.199,
+                    lng: -4.746
+                }
             },
             {
                 title: 'Isle of Arran',
                 description: "<p>Lorem ipsum.</p><br><p>Dolor sit.</p>",
-                image: "https://images.unsplash.com/photo-1518355667532-04b0b8a44cab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+                image: "https://images.unsplash.com/photo-1518355667532-04b0b8a44cab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",
+                coords: {
+                    lat: 55.579,
+                    lng: -5.208
+                }
             },
             {
                 title: 'Glen Coe',
                 description: "<p>Lorem ipsum.</p><br><p>Dolor sit.</p>",
-                image: "https://images.unsplash.com/photo-1524759562087-0e0d111bf4d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                image: "https://images.unsplash.com/photo-1524759562087-0e0d111bf4d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+                coords: {
+                    lat: 56.682,
+                    lng: -5.101
+                }
             },
         ];
     </script>
@@ -68,6 +80,7 @@
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
     <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDQ42X-RgTjQ_uSo13YoKjpoB_oAcESA0&callback=initMap"></script>
 </body>
 
 </html>
