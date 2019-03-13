@@ -29,3 +29,19 @@ flkty.on('scroll', function (progress) {
     progress = Math.max(0, Math.min(1, progress));
     progressBar.style.width = progress * 100 + '%';
 });
+
+// GOOGLE MAP
+
+window.initMap = function () {
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 6,
+        center: slides[0].coords
+    });
+    for (var i = 0; i < slides.length; i++) {
+
+        var marker = new google.maps.Marker({
+            position: slides[i].coords,
+            map: map
+        });
+    }
+};

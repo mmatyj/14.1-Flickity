@@ -1,46 +1,15 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+body { margin: 0; padding: 0; }
 
-body .carousel-cell {
-  width: 100%;
-  max-width: 1200px;
-  height: 50vh;
-  min-height: 250px;
-  margin-right: 10px;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-}
+body .main-carousel, body .carousel-cell { width: 100%; max-width: 1200px; height: 50vh; min-height: 250px; margin-right: 10px; background-size: cover; background-position: center; overflow: hidden; }
 
-body .carousel-cell .container {
-  max-width: 1200px;
-  margin: 100px auto;
-  text-align: center;
-}
+body .main-carousel .container, body .carousel-cell .container { max-width: 1200px; margin: 100px auto; text-align: center; }
 
-body .carousel-cell .container h3 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 70px;
-}
+body .main-carousel .container h3, body .carousel-cell .container h3 { font-family: 'Dancing Script', cursive; font-size: 70px; }
 
-body .restart-button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  font-family: 'Dancing Script', cursive;
-  width: 150px;
-  height: 40px;
-  background-color: transparent;
-  border: 1px solid grey;
-}
+body .main-carousel .container h3 p, body .carousel-cell .container h3 p { font-size: 25px; }
 
-body .progress-bar {
-  height: 10px;
-  width: 0;
-  background: #333;
-}
+body #map { width: 100%; height: 50vh; min-height: 250px; }
 
-/*# sourceMappingURL=style.css.map */
+body .restart-button { position: absolute; top: 0; left: 0; z-index: 2; font-family: 'Dancing Script', cursive; width: 150px; height: 40px; background-color: transparent; border: 1px solid grey; }
+
+body .progress-bar { height: 10px; width: 0; background: #333; }
